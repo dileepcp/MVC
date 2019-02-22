@@ -1,0 +1,22 @@
+﻿@using VedioRent.Models;
+@model IEnumerable<Movie>
+@{
+    ViewBag.Title = "Movies";
+<h2 class="h1">Movies</h2>
+@if (Model.Count() > 0)
+{
+    <ul class="list-group">
+        @foreach (var movie in Model)
+        {
+        <li class="list-group-item">movie.Name </li>
+        }
+
+    </ul>
+
+}
+else
+{
+   <text>No Movies available</text>
+}
+
+
